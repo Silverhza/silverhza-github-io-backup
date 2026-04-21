@@ -1,0 +1,14 @@
+- name: Python
+  percentage: 80
+  level: Expert
+  color: danger
+
+- name: Java
+  percentage: 70
+  level: Expert
+  color: secondary
+
+- name: C/C++
+  percentage: 70
+  level: Expert
+  color: 

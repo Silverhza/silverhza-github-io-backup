@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+
+<!--
+  portfolYOU Jekyll theme by Youssef Raafat
+  Free for personal and commercial use under the MIT license
+  https://github.com/YoussefRaafatNasry/portfolYOU
+-->
+
+<html lang="en" class="h-100">
+
+<head>
+
+  
+  
+  
+
+  
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Final Project, Part 3.1">
+  <meta property="og:description" content="Draft final project by group 50.">
+  <meta property="og:image" content="assets/pngs/final.png">
+
+  <title>Final Project, Part 3.1</title>
+  <meta name="description" content="Draft final project by group 50.">
+
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico">
+
+  <!-- Theme style -->
+  <script src="/assets/js/theme.js"></script>
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.0/css/all.css">
+
+  <!-- Bootstrap CSS CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+
+  <!-- Animate CSS CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body class="h-100 d-flex flex-column">
+
+  <main class="flex-shrink-0 container mt-5">
+    <nav class="navbar navbar-expand-lg navbar-themed">
+
+  <a class="navbar-brand" href="/"><h5><b>Zian He</b></h5></a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="fas fa-1x fa-bars text-themed"></i>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav ml-auto"><a class="nav-item nav-link active" href="/projects/">Projects</a>
+
+      <a class="nav-item nav-link " href="/blog/">Blog</a>
+
+      <a class="nav-item nav-link " href="/about/">About</a>
+
+      
+
+      <span id="theme-toggler" class="nav-item nav-link" role="button" onclick="toggleTheme()"></span>
+    </div>
+  </div>
+
+</nav>
+    <div class="col-lg-10 mx-auto mt-5 markdown-body">
+  <p><img src="https://rockfordil.gov/wp-content/themes/rockford/assets/images/General/cor_logo_color.png" alt="avatar" /></p>
+
+<h1 id="urban-crime-visualization"><center>Urban Crime Visualization</center></h1>
+
+<p><br /></p>
+
+<h5 id="zian-he--junsong-yao"><center>Zian He &amp; Junsong Yao</center></h5>
+
+<center>2022/11/26</center>
+
+<p><br /></p>
+
+<p><img src="https://rockfordil.gov/wp-content/uploads/2016/08/cityscape_website_retouched.jpg" alt="avatar" /></p>
+
+<p><br /></p>
+
+<h4 id="background"><center>Background</center></h4>
+<p>A city’s crime rate is always an important consideration in whether the city is a good place to live. And a city’s crime data can also reflect many characteristics of the city. So, we want to analyze the crime data of Rockford city to get some visualization that will help us understand the crime situation of the city. We are also looking for crime reports for the city of Urbana to use as contextual data for our dashboard, and we hope to get some correlations in crime characteristics across cities from contextual visualization.</p>
+
+<p><br /></p>
+
+<h4 id="dashboard-describe"><center>Dashboard Describe</center></h4>
+<p>We created a visualization(Fig 1) of the average number of wards of different types of crime objects for each day of the week in this city. As well as the distribution of the time of occurrence of different crime objects for each day of the week. We first created a heatmap with the x-axis of the visualization being the three types of crime objects (Person, Property, Society) and the y-axis being each day of the week. The color of the heatmap then represents the difference in the average number of victims. We link this heatmap to a bar chart. This allows us to see the number of different crime times occurring at that average ward number by selecting a different average ward number. This dashboard allows the layperson to understand the average number of wards, or victims, for each day of the week, what type of crimes these victims were subjected to, as well as the distribution of when these crimes occurred.</p>
+
+<p><br /></p>
+
+<center><vegachart schema-url="/assets/json/Final3.1.json" style="width: 100%"></vegachart></center>
+<center>Fig 1</center>
+
+<p><br /></p>
+
+<h4 id="contextual-visualization"><center>Contextual Visualization</center></h4>
+<p>Police Arrests Upload Datasets: <a href="https://data.illinois.gov/dataset/1d18ecc0-3c7e-4507-b8cc-7a5e30359d44/resource/ca1dceb3-01f8-4a56-935b-7e3035ff60a4/download/police-arrests-upload_20191226.csv">Datasets Link</a>.</p>
+
+<p>The contextual data we found were police arrest data for Urbana. This data has the same clear documentation of crimes in Urbana as the City of Rockford crime records that we used. And we found some very interesting elements in this data, such as the age, gender, and race of the arrestees. We think these variables can help us to analyze and predict the motives and trends of crime by combining or comparing the two data visualizations.</p>
+
+<p>Because the entire police arrest data volume is very large, we chose to just use a data volume of 1000. Next, we created three contextual visualizations(Fig 2&amp;3). The first graph is a histogram with the x-axis representing the age of the arrestees and the y-axis representing the number of arrestees of each age. And we categorized the race of the arrestees by color into Asian, Black, White, Hispanic, and Unknown. We can see the number of arrestees by looking at the length of each color in the bar. As you can see from this graph, the 20-25 age group has the highest number of arrests. White has the highest number of arrests in this age group. The second and third graphs of our second dashboard. the point plots above, the x-axis represents the reason the offender was arrested. the y-axis represents the method of the arrest. We have also divided each point into different racial groups by color. The bar chart below visualizes the number of arrests for each race. The x-axis represents the number of arrests and the y-axis represents the race of arrests. We can select the point in the dot plot by swiping the area with the mouse to see how the number of arrests for each race changes in comparison. We find that on-view arrests are the most common type of arrest, while warrant arrests are the least common type of arrest. We also find that the more serious arrests, such as warrant arrest or detention, have more blacks in them. The less severe types of arrests, such as summons, have more whites.</p>
+
+<p><br /></p>
+
+<center><vegachart schema-url="/assets/json/contextual1.json" style="width: 100%"></vegachart></center>
+<center>Fig 2</center>
+
+<p><br /></p>
+
+<center><vegachart schema-url="/assets/json/contextual2.json" style="width: 100%"></vegachart></center>
+<center>Fig 3</center>
+
+<p><br /></p>
+
+<h4 id="conclusion"><center>Conclusion</center></h4>
+<p>By visualizing the two dashboards and a graph, we found that the most frequent crimes in the city are crimes against property and occur most often on Mondays and Fridays. Crimes against individuals are concentrated on Saturdays and Sundays, while crimes against society are more evenly distributed. The age of the offenders is between 20 and 25, with whites being the most numerous, followed by blacks. And blacks were more often arrested for felonies, while whites were more often arrested for misdemeanors. We believe that through these visualization graphs we can effectively analyze and predict the crime trends in the city.</p>
+
+<p><br /></p>
+
+<h4 id="citation"><center>Citation</center></h4>
+<ul>
+  <li>City of Rockford Crime Offenses 2011-Present - City of Rockford Crime Offenses 2011-Present - data.illinois.gov. (n.d.). <a href="https://data.illinois.gov/dataset/116city_of_rockford_crime_offenses_2011present/resource/b23aa1b9-c0e0-4779-ba7a-6ca8b7b1df1c">https://data.illinois.gov/dataset/116city_of_rockford_crime_offenses_2011present/resource/b23aa1b9-c0e0-4779-ba7a-6ca8b7b1df1c</a></li>
+  <li>WIFR Newsroom. (2022, August 26). Rockford crime stats: Violent crimes down slightly, auto thefts rise. https://www.wifr.com. <a href="https://www.wifr.com/2022/08/26/rockford-crime-stats-violent-crimes-down-slightly-auto-thefts-rise/">https://www.wifr.com/2022/08/26/rockford-crime-stats-violent-crimes-down-slightly-auto-thefts-rise/</a></li>
+  <li>Urbana Police Arrests - data.illinois.gov. (n.d.). <a href="https://data.illinois.gov/dataset/police-arrests">https://data.illinois.gov/dataset/police-arrests</a></li>
+</ul>
+
+<p><br /></p>
+
+<div style="display: flex; justify-content:space-between;">
+            <figure style="text-align:center; flex:1;">
+                <img src="https://canvas.illinois.edu/images/thumbnails/5684633/OjnIrFLUCbnwolwdaR1MbMWFB5B5QcMrKnee1kce" width="140px" />
+                <figcaption styles="text-align: center;">Zian He</figcaption>
+            </figure>
+            <figure style="text-align:center; flex:1;">
+                <img src="https://canvas.illinois.edu/images/thumbnails/5594604/AtlWd77Xpw71Vxr3kl0odAeqj4xVAQkB18QlpUot" width="140px" />
+                <figcaption styles="text-align: center;">Junsong Yao</figcaption>
+            </figure>
+</div>
+
+<p><br />
+<br /></p>
+
+<p><img src="https://marketing.illinois.edu/wp-content/uploads/2021/09/wordmark.png" width="250" /></p>
+
+<p><br />
+<br /></p>
+
+<!-- these are written in a combo of html and liquid -->
+
+<div class="left">
+<a class="m-1 btn btn-outline-primary btn-2 " href="https://data.illinois.gov/dataset/3bfc782a-baae-43ea-a29a-214fb1cb725e/resource/b23aa1b9-c0e0-4779-ba7a-6ca8b7b1df1c/download/cm_offense_archive.csv">
+  The Data
+</a>
+</div>
+
+<div class="right">
+<a class="m-1 btn btn-outline-primary btn-2 " href="https://github.com/Silverhza/silverhza.github.io/blob/main/python_notebooks/group50-final-project-part3.1.ipynb">
+  The Analysis
+</a>
+</div>
+
+
+</div>
+  </main>
+  <footer class="mt-auto py-3 text-center">
+
+  <small class="text-muted mb-2">
+    <i class="fas fa-code"></i> with <i class="fas fa-heart"></i>
+    by <strong>Zian He</strong>
+  </small>
+
+  <div class="container-fluid justify-content-center"><a class="social mx-1"  href="mailto:zianhe2@illinois.edu"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#db4437'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fas fa-envelope fa-1x"></i>
+    </a><a class="social mx-1"  href="https://www.github.com/Silverhza"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#333333'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-github fa-1x"></i>
+    </a><a class="social mx-1"  href="https://www.twitter.com/your_username"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#1da1f2'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-twitter fa-1x"></i>
+    </a><a class="social mx-1"  href="https://www.youtube.com/your_channel_name"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#ff0000'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-youtube fa-1x"></i>
+    </a>
+
+</div><small id="attribution">
+    theme <a href="https://github.com/YoussefRaafatNasry/portfolYOU">portfolYOU</a>
+  </small>
+
+</footer>
+
+
+<!-- Custom page specific js files -->
+  
+    <script src='/assets/js/vega.min.js' type="text/javascript"></script>
+  
+    <script src='/assets/js/vega-lite.min.js' type="text/javascript"></script>
+  
+    <script src='/assets/js/vega-embed.min.js' type="text/javascript"></script>
+  
+    <script src='/assets/js/justcharts.js' type="text/javascript"></script>
+  
+
+
+
+  
+  <!-- GitHub Buttons -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+<!-- jQuery CDN -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper.js CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+
+<!-- Bootstrap JS CDN -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<!-- wow.js CDN & Activation -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+<script> new WOW().init(); </script>
+
+<!-- Initialize all tooltips -->
+<script>
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
+</body>
+
+<footer>
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <span id="busuanzi_container_site_pv">Site Visits: <span id="busuanzi_value_site_pv"></span> Times</span>
+</footer>
+
+</html>
